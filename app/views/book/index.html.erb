@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>All Books</title>
+  </head>
+  <body>
+    <h2>sdfadfsadfsadfljasldfjlsadfjadjkf</h2>
+    <ul>
+      <% @books.each do |book| %>
+    <li><%= book.title %>
+      <ul>
+        <li><%= book.description %></li>
+      </ul>
+    </li>
+    <% end %>
+    </ul>
+  </body>
+</html>
