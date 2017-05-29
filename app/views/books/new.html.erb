@@ -1,0 +1,31 @@
+<div class="">
+<h3>Add a new book</h3>
+  <form class="new-book-form" action="/books.html" method="post">
+   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <div class="">
+      <label for="new-book-title">Title
+        <input type="text" id="new-book-title" name="book-title" value="">
+      </label>
+    </div>
+    <div class="">
+      <label for="new-book-price">Price
+        <input type="text" id="new-book-price" name="book-price" value="">
+      </label>
+    </div>
+    <div class="">
+      <label for="new-book-description">Description
+        <textarea type="text" id="new-book-description" name="book-description" value=""></textarea>
+      </label>
+    </div>
+    <div>
+      <label for="new-book-subject">Subject
+        <input type="text" id="new-book-subject" name="book-subject" value="">
+      </label>
+    </div>
+    <button type="submit" name="submit">Create new Book</button>
+  </form>
+</div>
+
+<div class="">
+  <h3>hi <%= @post %></h3>
+</div>

@@ -19,11 +19,11 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
 
-  if @book.save
-     redirect_to :action => 'index'
-  else
-     @subjects = Subject.all
-     render :action => 'new'
+    if @book.save
+       redirect_to :action => 'list'
+    else
+       @subjects = Subject.all
+       render :action => 'new'
   end
 
   end
@@ -55,7 +55,7 @@ class BooksController < ApplicationController
 
   def delete
    Book.find(params[:id]).destroy
-   redirect_to :action => 'index'
+   redirect_to :action => 'list'
   end
 
   end
